@@ -1,0 +1,198 @@
+/*font links*/
+/*adding Roboto fonts*/
+@font-face {
+  font-family: Roboto;
+  src: url(./resources/fonts/roboto/Roboto-ThinItalic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Thin.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Regular.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-MediumItalic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Medium.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-LightItalic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Light.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Italic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-BoldItalic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Bold.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-BlackItalic.ttf) format('truetype');
+  src: url(./resources/fonts/roboto/Roboto-Black.ttf) format('truetype');
+}
+/*global styles */
+html, body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*header*/
+header {
+  background-color: #656667;
+  color: #fff;
+  width: 100%;
+  height: 317px;
+  position: relative;
+  margin: 0 auto;
+  
+}
+/*upper lines*/
+.lines {
+  background-image: url(./img/stripe-short.png);
+  height: 60px;
+}
+/*wrapper grid*/
+.wrapper-grid {
+  display: grid;
+  grid-template: 1fr 1fr/ 1.3fr 3fr;
+  grid-template-areas: 'logo side-lines'
+                       'logo nav';
+}
+/*side-lines*/
+.side-lines {
+  overflow: hidden;
+  grid-area: side-lines;
+  display: flex;
+  flex-direction: column;
+}
+.side-lines div {
+  width: 100%;
+  height: 21px;
+}
+#second-side-line {
+ background-image: url(./img/stripe-short.png);
+}
+#fourth-side-line {
+  background-image: url(./img/stripe-short.png);
+  margin-left: 100px;
+}
+/*logo*/
+.logo {
+  height: 236px;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+.logo:hover {
+  cursor: pointer;
+}
+/*logo-text*/
+.logo-text {
+  text-align: center;
+  position: relative;
+}
+.logo-text h1 {
+  font-size: 48px;
+}
+.logo-text h2 {
+  display: inline-block;
+  position: absolute;
+  left: -2px;
+  top: 80px;
+  width: 280px;
+  padding: 0px;
+}
+/*navigation*/
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-links {
+  width: 200px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #474849; 
+  display: flex;
+  justify-content: center;
+}
+.nav-links:hover {
+  background-color: #545555; 
+  cursor: pointer;
+}
+/*bottom lines*/
+#bottom-lines {
+  position: absolute;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+}
+/*main content*/
+main {
+  font-family: Roboto-Thin;
+  width: 100%;
+  display: grid;
+  grid-template: 0.5fr 1fr 1fr 0.5fr / 1fr 1fr 1fr;
+  grid-template-areas:
+                      'introduction introduction introduction'
+                      'left-up center-up right-up'
+                      'left-down center-down right-down'
+                      'feedbacks feedbacks feedbacks'
+                      ;
+}
+/*content blocks*/
+.content-block {
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+#introduction{
+  grid-area: introduction;
+  font-size: 30px;
+  text-align: center;
+}
+#left-up {
+  grid-area: left-up;
+}
+#center-up {
+  grid-area: center-up;
+}
+#right-up {
+  grid-area: right-up;
+}
+#left-down {
+  grid-area: left-down;
+}
+#center-down {
+  grid-area: center-down;
+}
+#right-down {
+  grid-area: right-down;
+}
+#feedbacks {
+  grid-area: feedbacks;
+
+}
+/*footer*/
+footer {
+  font-family: Roboto-Thin;
+  width: 100%;
+  background-color: yellow;
+}
+.footer-block {
+  margin: 20px;
+  text-align: center;
+}
+#left {
+  grid-area: left;
+}
+#center-left {
+  grid-area: center-left;
+}
+#center-right {
+  grid-area: center-right;
+}
+#right {
+  grid-area: right;
+}
+#copyrights {
+  grid-area: copyrights;
+  text-align: center;
+}
+.footer-wrapper {
+  display: grid;
+  grid-template: 1fr 0.5fr/ 1fr 1fr 1fr 1fr;
+  grid-template-areas:'left center-left center-right right'
+                      'copyrights copyrights copyrights copyrights'
+                      ;
+}
+
