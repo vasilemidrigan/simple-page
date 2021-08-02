@@ -1,25 +1,29 @@
 /*font links*/
 /*adding Roboto fonts*/
 @font-face {
-  font-family: Roboto;
-  src: url(./resources/fonts/roboto/Roboto-ThinItalic.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-Thin.ttf) format('truetype');
+  font-family: 'Roboto regular';
   src: url(./resources/fonts/roboto/Roboto-Regular.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-MediumItalic.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-Medium.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-LightItalic.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-Light.ttf) format('truetype');
+
+}
+@font-face {
+  font-family: 'Roboto italic';
   src: url(./resources/fonts/roboto/Roboto-Italic.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-BoldItalic.ttf) format('truetype');
+
+}
+@font-face {
+  font-family: 'Roboto bold';
   src: url(./resources/fonts/roboto/Roboto-Bold.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-BlackItalic.ttf) format('truetype');
-  src: url(./resources/fonts/roboto/Roboto-Black.ttf) format('truetype');
+
 }
 /*global styles*/
 html, body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto-regular', sans-serif;
   margin: 0;
   padding: 0;
+}
+/*headers*/
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: 'Roboto bold', sans-serif;
 }
 /*horizontal line styles*/
 hr {
@@ -139,7 +143,8 @@ header {
 }
 /*main content*/
 main {
-  font-family: Roboto-Thin;
+  background-color: #656667;
+  font-family: 'Roboto regular';
   width: 100%;
   display: grid;
   grid-template: 0.5fr 1fr 1fr 0.5fr / 1fr 1fr 1fr;
@@ -182,9 +187,13 @@ main {
 
 /*content blocks*/
 .content-block {
+  background-color: #7c7c7c;
   font-size: 22px;
   text-align: center;
   padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 15px;
 }
 #introduction{
   grid-area: introduction;
@@ -215,12 +224,18 @@ main {
 }
 /*footer*/
 footer {
-  font-family: Roboto-Thin;
+  font-size: 22px;
+  font-family: 'Roboto regular';
   width: 100%;
 }
 .footer-block {
+  background-color: #939393;
   margin: 20px;
   text-align: center;
+}
+.footer-block a {
+  text-decoration: none;
+  color: black;
 }
 #left {
   grid-area: left;
@@ -245,5 +260,10 @@ footer {
                       'copyrights copyrights copyrights copyrights'
                       ;
 }
-
+/*footer media queries*/
+@media (max-width: 925px) {
+  .footer-content {
+    display: none;
+  }
+}
 
