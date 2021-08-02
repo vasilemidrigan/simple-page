@@ -21,6 +21,10 @@ html, body {
   margin: 0;
   padding: 0;
 }
+/*horizontal line styles*/
+hr {
+  margin: 50px;
+}
 
 /*header*/
 header {
@@ -30,7 +34,6 @@ header {
   height: 317px;
   position: relative;
   margin: 0 auto;
-  
 }
 /*upper lines*/
 .lines {
@@ -109,6 +112,24 @@ header {
   background-color: #545555; 
   cursor: pointer;
 }
+/*nav media query max-width: 1235*/
+@media only screen and (max-width: 1235px) {
+  .nav-links {
+    width: 150px;
+  }
+}
+/*nav media query max-width: 1040px*/
+@media only screen and (max-width: 1040px) {
+  .nav-links {
+    width: 100px;
+  }
+}
+/*nav media query max-width: 830px*/
+@media only screen and (max-width: 830px) {
+  .nav-links {
+    width: 80px;
+  }
+}
 /*bottom lines*/
 #bottom-lines {
   position: absolute;
@@ -129,6 +150,36 @@ main {
                       'feedbacks feedbacks feedbacks'
                       ;
 }
+/*media queries for main content (max-width: 1030px)*/
+@media only screen and (max-width: 1030px) {
+  main {
+    grid-template: 0.5fr 1fr 1fr 0.5fr / 1fr 1fr;
+    grid-template-areas:
+                        'introduction introduction'
+                        'left-up center-up'
+                        'right-up left-down'
+                        'center-down right-down'
+                        'feedbacks feedbacks'
+                        ;
+  }
+}
+/*media query (max-width: 750px)*/
+@media only screen and (max-width: 750px) {
+  main {
+    grid-template: 0.5fr 1fr 1fr 0.5fr / 1fr;
+    grid-template-areas:
+                        'introduction'
+                        'left-up'
+                        'center-up'
+                        'right-up'
+                        'left-down'
+                        'center-down'
+                        'right-down'
+                        'feedbacks'
+                        ;
+  }
+}
+
 /*content blocks*/
 .content-block {
   font-size: 22px;
@@ -166,7 +217,6 @@ main {
 footer {
   font-family: Roboto-Thin;
   width: 100%;
-  background-color: yellow;
 }
 .footer-block {
   margin: 20px;
@@ -195,4 +245,5 @@ footer {
                       'copyrights copyrights copyrights copyrights'
                       ;
 }
+
 
