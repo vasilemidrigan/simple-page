@@ -15,7 +15,7 @@
   src: url(./resources/fonts/roboto/Roboto-BlackItalic.ttf) format('truetype');
   src: url(./resources/fonts/roboto/Roboto-Black.ttf) format('truetype');
 }
-/*global styles */
+/*global styles*/
 html, body {
   font-family: Roboto, sans-serif;
   margin: 0;
